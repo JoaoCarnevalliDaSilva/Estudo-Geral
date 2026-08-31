@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./1 - style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <main>
+    <h1>Melhor utilizar Álcool ou Gasolina?</h1>
+
+    <p>Esse comparativo é feito utilizando como base o consumo de:</p>
+    <p>- Álcool: 8km/L</p>
+    <p>- Gasolina: 12km/L</p>
+
+  <form action="" onsubmit="calcular(event)">
+    <label for="">Qual será a distância a ser percorrida?</label>
+    <input type="text" id="distancia" placeholder="Ex: 120" class="valor">
+    <label for="">Preço do Álcool:</label>
+    <input type="text" id="alcool" placeholder="Ex: 2.20" class="valor">
+    <label for="">Preço da Gasolina</label>
+    <input type="text" id="gasolina" placeholder="Ex: 3.30" class="valor">
+    <input type="submit" value="Calcular" class="botao">
+  </form>
+
+  <div id="resultado"></div>
+  </main>
+
+  <script src="./1 - script.js"></script>
+
+</body>
+</html>
