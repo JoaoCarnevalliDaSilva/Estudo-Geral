@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conciliação de Notas Fiscais</title>
+</head>
+<body>
+
+  <h1>Painel de Faturamento</h1>
+
+  <form onsubmit="conciliar(event)">
+    <label>Filtrar por Status da Nota:</label><br>
+    <select id="status">
+      <option value="Todos">Todos</option>
+      <option value="Pendente">Pendente</option>
+      <option value="Paga">Paga</option>
+    </select><br><br>
+    
+    <input type="submit" value="Processar Lote">
+  </form>
+
+  <hr>
+
+  <div id="lista-notas"></div>
+  <br>
+  <div id="total-notas"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
