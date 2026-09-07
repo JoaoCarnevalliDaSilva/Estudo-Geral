@@ -27,11 +27,79 @@
         <span id="total-pendente"></span>
       </div>
     </div>
-    <div class="resultados"></div>
-    <div class="tabelas"></div>
+    
+    <div class="resultados">
+      <form onsubmit="calcular(event)">
+        <label>Categoria:</label>
+        <select id="categoria">
+          <option value="Contratação">Contratação</option>
+          <option value="Aporte de Capital">Aporte de Capital</option>
+          <option value="Consultoria">Consultoria</option>
+          <option value="Investimentos">Investimentos</option>
+          <option value="Moveis e Utensilios">Moveis e Utensilios</option>
+        </select>
+        <label>Status:</label>
+        <select id="status">
+          <option value="Paga">Paga</option>
+          <option value="Pendente">Pendente</option>
+          <option value="Recebida">REcebida</option>
+        </select>
+        <input type="submit" value="Filtrar">
+      </form>
+    </div>
+    
+    <div class="tabelas">
+      <h3>Tabela / Lista de Lançamentos:</h3>
+      <table>
+        <tr>
+          <th>Categoria</th>
+          <th>Valor</th>
+          <th>Departamento</th>
+          <th>Movimentação</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Licenças AWS</td>
+          <td>R$ 4.500,00</td>
+          <td>TI</td>
+          <td>Saída</td>
+          <td>Paga</td>
+        </tr>
+        <tr>
+          <td>Aporte de Capital</td>
+          <td>R$ 50.000,00</td>
+          <td>Investimentos</td>
+          <td>Entrada</td>
+          <td>Recebida</td>
+        </tr>
+        <tr>
+          <td>Consultoria</td>
+          <td>R$ 3.200,00</td>
+          <td>Financeiro</td>
+          <td>Saída</td>
+          <td>Pendente</td>
+        </tr>
+        <tr>
+          <td>Aporte de Capital</td>
+          <td>R$ 120.000,00</td>
+          <td>Vendas</td>
+          <td>Saída</td>
+          <td>Paga</td>
+        </tr>
+        <tr>
+          <td>Contratação</td>
+          <td>R$ 12.300,00</td>
+          <td>RH</td>
+          <td>Saída</td>
+          <td>Paga</td>
+        </tr>
+      </table>
+    </div>
   </main>
 
-  <footer></footer>
+  <footer>
+    <p>Todos os direitos reservados</p>
+  </footer>
 
   <script src="./6 - script.js"></script>
   

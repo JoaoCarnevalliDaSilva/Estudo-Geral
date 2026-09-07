@@ -7,14 +7,21 @@ body {
   display: grid;
   grid-template-columns: 1fr minmax(500px, 1200px) 1fr;
   grid-template-rows: 14% 80% 6%;
+  font-family: monospace;
 }
 
 header {
   grid-column: 2/3;
   grid-row: 1/2;
-  background-color: aqua;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 42px;
+  text-shadow: 1px 1px;
 }
 
 main {
@@ -24,24 +31,42 @@ main {
 }
 
 .kpi {
-  background-color: bisque;
+  background-color: white;
   height: 30%;
   display: flex;
+  font-size: 14px;
 }
 
 .lado1 {
   flex: 1;
-  background-color: black;
+  padding: 20px;
 }
 
 .lado2 {
   flex: 1;
-  background-color: blueviolet;
+  padding: 20px;
 }
 
 .resultados {
-  background-color: aqua;
   height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultados label {
+  font-weight: bold;
+  padding: 12px;
+}
+
+.resultados option {
+  padding: 12px;
+}
+
+.resultados input {
+  padding: 8px;
+  border-radius: 4px;
+
 }
 
 footer {
