@@ -27,7 +27,6 @@ header h1 {
 main {
   grid-column: 2/3;
   grid-row: 2/3;
-  background-color: rgb(43, 186, 43);
 }
 
 .kpi {
@@ -66,12 +65,42 @@ main {
 .resultados input {
   padding: 8px;
   border-radius: 4px;
-
 }
+
+.tabelas h3 {
+  background-color: black;
+  font-weight: bold;
+  color: white;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.tabelas table {
+  width: 100%;
+  padding: 20px;
+}
+
+.tabelas th {
+  border-bottom: 1px solid black;
+}
+
+.tabelas td {
+  text-align: center;
+}
+
 
 footer {
   grid-column: 2/3;
   grid-row: 3/4;
   background-color: rgb(5, 6, 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p{ 
+  color: white;
+  font-weight: bold;
 }
 
