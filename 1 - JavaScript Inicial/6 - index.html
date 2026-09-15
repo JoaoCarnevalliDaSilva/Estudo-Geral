@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./6 - style.css">
-  <title>Document</title>
+  <title>Dashboard Financeiro</title>
 </head>
 <body>
 
@@ -15,16 +15,16 @@
   <main>
     <div class="kpi">
       <div class="lado1">
-        <h3>KPI 1: Total Entradas: </h3>
-        <span id="total-entradas"></span>
-        <h3>KPI 3: Saldo Líquido: </h3>
-        <span id="saldo-liquido"></span>
+        <h3>KPI 1: Total Entradas:</h3>
+        <span id="total-entradas">R$ 0.00</span>
+        <h3>KPI 3: Saldo Líquido:</h3>
+        <span id="saldo-liquido">R$ 0.00</span>
       </div>
       <div class="lado2">
-        <h3>KPI 2: Total Saídas: </h3>
-        <span id="total-saidas"></span>
-        <h3>KPI 4: Total Pendente: </h3>
-        <span id="total-pendente"></span>
+        <h3>KPI 2: Total Saídas:</h3>
+        <span id="total-saidas">R$ 0.00</span>
+        <h3>KPI 4: Total Pendente:</h3>
+        <span id="total-pendente">R$ 0.00</span>
       </div>
     </div>
     
@@ -32,18 +32,21 @@
       <form onsubmit="calcular(event)">
         <label>Categoria:</label>
         <select id="categoria">
-          <option value="Contratação">Contratação</option>
+          <option value="Todos">Todos</option>
+          <option value="Licença AWS">Licença AWS</option>
           <option value="Aporte de Capital">Aporte de Capital</option>
           <option value="Consultoria">Consultoria</option>
-          <option value="Investimentos">Investimentos</option>
-          <option value="Moveis e Utensilios">Moveis e Utensilios</option>
+          <option value="Contratacao">Contratação</option>
         </select>
+
         <label>Status:</label>
         <select id="status">
+          <option value="Todos">Todos</option>
           <option value="Paga">Paga</option>
           <option value="Pendente">Pendente</option>
           <option value="Recebida">Recebida</option>
         </select>
+
         <input type="submit" value="Filtrar">
       </form>
     </div>
@@ -51,48 +54,17 @@
     <div class="tabelas">
       <h3>Tabela / Lista de Lançamentos:</h3>
       <table>
-        <tr>
-          <th>Categoria</th>
-          <th>Valor</th>
-          <th>Departamento</th>
-          <th>Movimentação</th>
-          <th>Status</th>
-        </tr>
-        <tr>
-          <td>Licenças AWS</td>
-          <td>R$ 4.500,00</td>
-          <td>TI</td>
-          <td>Saída</td>
-          <td>Paga</td>
-        </tr>
-        <tr>
-          <td>Aporte de Capital</td>
-          <td>R$ 50.000,00</td>
-          <td>Investimentos</td>
-          <td>Entrada</td>
-          <td>Recebida</td>
-        </tr>
-        <tr>
-          <td>Consultoria</td>
-          <td>R$ 3.200,00</td>
-          <td>Financeiro</td>
-          <td>Saída</td>
-          <td>Pendente</td>
-        </tr>
-        <tr>
-          <td>Aporte de Capital</td>
-          <td>R$ 120.000,00</td>
-          <td>Vendas</td>
-          <td>Saída</td>
-          <td>Paga</td>
-        </tr>
-        <tr>
-          <td>Contratação</td>
-          <td>R$ 12.300,00</td>
-          <td>RH</td>
-          <td>Saída</td>
-          <td>Paga</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Departamento</th>
+            <th>Movimentação</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <!-- A tabela será preenchida dinamicamente aqui -->
+        <tbody id="tabela-corpo"></tbody>
       </table>
     </div>
   </main>
@@ -102,6 +74,5 @@
   </footer>
 
   <script src="./6 - script.js"></script>
-  
 </body>
 </html>
