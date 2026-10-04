@@ -19,14 +19,17 @@ int main(void) {
     int localizador = 0;
     printf("Digite o valor que voce procura: \n");
     scanf("%d", &localizador);
-    int posicao = 0;
+    int posicao = -1;
+    int achou = 0;
     for (int i=0; i<n ; i++) {
         if (x[i] == localizador) {
             posicao = i;
+            achou = 1;
+            break;
         }
     }
 
-    if (posicao != 0) {
+    if (achou) {
         printf("Encontrado na posicao: %d", posicao+1);
     } else {
         printf("Valor nao encontrado.");
