@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int calcular_media(int n, int vetor[]);
-int contar_acima_da_media(int n, int vetor[], int media);
+float calcular_media(int n, int vetor[]);
+int contar_acima_da_media(int n, int vetor[], float media);
 
 int main(void) {
 
@@ -20,7 +20,7 @@ int main(void) {
     return 0;
 }
 
-int calcular_media(int n, int vetor[]) {
+float calcular_media(int n, int vetor[]) {
     int soma = 0, media = 0, quant = 0;
     for (int i=0; i<n; i++) {
         printf("Digite um valor para a posicao %d: \n", i+1);
@@ -30,10 +30,10 @@ int calcular_media(int n, int vetor[]) {
         soma += vetor[i];
         quant++;
     }
-    media = soma / quant;
+    media = (float)soma / quant;
     return media;
 }
-int contar_acima_da_media(int n, int vetor[], int media) {
+int contar_acima_da_media(int n, int vetor[], float media) {
     int qua = 0;
     for (int i=0; i<n; i++) {
         if (vetor[i] > media) {
