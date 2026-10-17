@@ -10,7 +10,7 @@ public class ex7 {
         int numero2 = scanner.nextInt();
         System.out.printf("%d + %d = %d \n", numero1, numero2, numero1+numero2);
 
-
+wssa
 
         scanner.close();
     }
