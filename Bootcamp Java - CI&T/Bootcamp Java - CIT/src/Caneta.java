@@ -17,7 +17,11 @@ public class Caneta {
     }
 
     void rabiscar() {
-
+        if(this.tampada==true) {
+            System.out.println("Erro, nao posso rabiscar. Caneta esta fechada");
+        } else {
+            System.out.println("Estou rabiscando");
+        }
     }
 
     void tampar() {

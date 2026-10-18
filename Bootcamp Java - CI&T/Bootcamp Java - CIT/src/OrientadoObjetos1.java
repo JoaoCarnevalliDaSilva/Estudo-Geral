@@ -10,7 +10,18 @@ public class OrientadoObjetos1 {
         c1.ponta = 0.5f;
         c1.carga = 90;
         c1.tampar(); //chamar o metodo tampar, para tampar a caneta
+        c1.rabiscar();
         c1.status();
+
+        //instanciando uma nova caneta
+        Caneta c2 = new Caneta();
+        c2.modelo = "Pena";
+        c2.cor = "Preta";
+        c2.ponta = 0.7f;
+        c2.carga = 20;
+        c2.tampada = false;
+        c2.rabiscar();
+        c2.status();
 
         scanner.close();
     }
