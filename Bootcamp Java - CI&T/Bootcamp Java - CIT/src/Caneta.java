@@ -1,11 +1,10 @@
 public class Caneta {
     //Atributos
-    String modelo;
-    String cor;
-    float ponta;
-    int carga;
-    boolean tampada;
-
+    public String modelo;
+    public String cor;
+    private float ponta;
+    protected int carga;
+    protected boolean tampada;
 
     //Metodos
     void status() {
