@@ -5,11 +5,14 @@ public class ex15 {
 
         Scanner scanner = new Scanner(System.in);
 
-
-
-
-
-
+        Televisao novaTV = new Televisao();
+        novaTV.marca = "LG";
+        novaTV.mudarCanal(5);
+        novaTV.ligar();
+        novaTV.aumentarVolume();
+        novaTV.aumentarVolume();
+        novaTV.mudarCanal(12);
+        novaTV.status();
 
         scanner.close();
     }

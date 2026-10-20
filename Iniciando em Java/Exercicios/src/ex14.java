@@ -5,11 +5,13 @@ public class ex14 {
 
         Scanner scanner = new Scanner(System.in);
 
-
-
-
-
-
+        Livro novoLivro = new Livro();
+        novoLivro.titulo = "Harry Potter";
+        novoLivro.autor = "Lula";
+        novoLivro.abrirLivro(200);
+        novoLivro.avancarPaginas();
+        novoLivro.folhear(250);
+        novoLivro.status();
 
         scanner.close();
     }
