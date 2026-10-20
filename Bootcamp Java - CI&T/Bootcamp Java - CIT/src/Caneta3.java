@@ -12,8 +12,6 @@ public class Caneta3 {
         this.ponta = p;
         this.tampar();
     }
-
-
     //Metodos
     public String getModelo() {
         return this.modelo;

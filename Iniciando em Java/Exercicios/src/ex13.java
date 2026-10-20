@@ -5,11 +5,13 @@ public class ex13 {
 
         Scanner scanner = new Scanner(System.in);
 
-
-
-
-
-
+        Lampada novaLampada = new Lampada();
+        novaLampada.marca = "Phillips";
+        novaLampada.tipo = "Area Externa";
+        novaLampada.desligar();
+        novaLampada.observar();
+        novaLampada.mudarEstado();
+        novaLampada.observar();
 
         scanner.close();
     }
