@@ -8,8 +8,8 @@ public class ex17 {
         novaConta.definirLimites(500.00);
         novaConta.depositar(200.00);
         novaConta.sacar(800.00);
-
-
+        novaConta.sacar(400.00);
+        novaConta.exibirSaldo();
 
         scanner.close();
     }

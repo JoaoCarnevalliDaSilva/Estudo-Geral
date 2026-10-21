@@ -2,7 +2,7 @@ public class ContaCorrente {
 
     // criar os elementos
     public String titular;
-    private double saldo = 0.0;
+    private double saldo = 0.00;
     private double limite;
 
     // criar os metodos
@@ -15,10 +15,10 @@ public class ContaCorrente {
         }
     }
     public void sacar(double valor) {
-        if(this.saldo + this.limite <= valor) {
+        if(this.saldo + this.limite >= valor) {
             this.saldo -= valor;
         } else {
-            System.out.println("Saldo indisponivel. Saldo disponivel atualmente eh: "+this.saldo);
+            System.out.println("Saldo indisponivel. Saldo disponivel atualmente eh: "+(this.saldo+this.limite));
         }
     }
     public void exibirSaldo() {
@@ -26,7 +26,7 @@ public class ContaCorrente {
         System.out.println("==============");
         System.out.println("Saldo atual: "+this.saldo);
         System.out.println("Limite: "+this.limite);
-        System.out.println("Saldo total: "+this.saldo+this.limite);
+        System.out.println("Saldo total: "+(this.saldo+this.limite));
     }
 
 }
