@@ -17,7 +17,7 @@ public class ContaBancaria2 {
         this.saldo=valor;
     }
     public double getLimite(){
-        return this.saldo;
+        return this.limite;
     }
     public void setLimite(double limite) {
         if(limite <= 0) {
